@@ -1,6 +1,8 @@
 /* las fuentes variables solo incluyen los font-weight 
 para aplicar italic hace falta un font-face a parte */
 
+/* font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem); */
+
 /* fraunces font-family  */
 
 @font-face {
@@ -33,12 +35,11 @@ para aplicar italic hace falta un font-face a parte */
 }
 
 body {
-    font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 100px 0;
-    padding: 0 50px;
+    padding: 0 10px;
     background-color: #f2ebe3ff;
 }
 
@@ -54,63 +55,159 @@ body {
 /* GENERAL STYLES  */
 /* *************** */
 
+
 .main-wrapper {
     max-width: 400px;
-
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: red;
 }
 
-.img {
+/* ********* */
+/* TOP CARD  */
+/* ********* */
+
+.img-mobile {
     width: 100%;
+    display: block;
+}
+
+.img-desktop {
+    display: none;
+}
+
+
+/* ******** */
+/* CONTENT  */
+/* ******** */
+
+.content {
+    background-color: white;
+    padding: 2rem;
 }
 
 .subheading {
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 0.5rem + 1.5vw, 1rem);
     color: #6c7289ff;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .heading-primary {
     font-family: "Fraunces";
+    font-size: clamp(1.8rem, 0.75rem + 1.5vw, 2rem);
     color: #1c232bff;
+    font-weight: 900;
 }
 
 .text {
     font-family: "Montserrat";
     color: #6c7289ff;
+    font-size: clamp(0.8rem, 0.5rem + 1.5vw, 1rem);
     line-height: 1.5;
+    font-weight: 500;
+}
+
+/* price  */
+/* ****** */
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .actual-price {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 0.75rem + 1.5vw, 2rem);
     color: #3c8067ff;
+    font-weight: 800;
+    font-family: "Fraunces";
 }
 
 .before-price {
     text-decoration: line-through;
     color: #6c7289ff;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
+
+/* button  */
+/* ****** */
 
 .button {
     padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 9px;
+    border: none;
+    background-color: #3c8067ff;
+    font-weight: 600;
+    font-family: "Montserrat";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* font */
 }
 
 .button-text {
     color: white;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .button-icon {
     color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.button:active {
+    background-color: #1b4133ff;
 }
 
 
-@media (max-width: 375px) {
-    .main-wrapper {
+
+@media (min-width: 400px) {
+    
+    html,body {
+        height: 100vh;
+    }
+
+    body {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
     .main-wrapper {
-        background-color: lightblue;
+        flex-direction: row;
+        height: auto;
+        max-width: 650px;
+    }
+
+    .img-box {
+        width: 40%;
+        /* usamos esto para que la imagen es estire y ocupe todo el alto  */
+        display: flex;
+        align-items: stretch;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .img-mobile {
+        display: none;
+    }
+
+    .img-desktop {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
 }
