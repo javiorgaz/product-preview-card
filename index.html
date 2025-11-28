@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <title>Frontend Mentor | Product preview card component</title>
+    </head>
+    <body>
+        <main class="main-wrapper">
+            <div class="img-box margin-b-md">
+                <img class="img" src="images/image-product-mobile.jpg" alt="" />
+            </div>
+            <div class="content">
+                <p class="sub-heading margin-b-md">Perfume</p>
+                <h1 class="heading-primary margin-b-md">
+                    Gabrielle Essence Eau De Parfum
+                </h1>
+                <p class="text margin-b-md">
+                    A flotal, solar and volumptuous interpretation composed by
+                    Olivier Polge, Perfumer-Creator for the House of CHANEL.
+                </p>
+                <div class="price-wrapper">
+                    <div class="actual-price">
+                        <span>$</span>
+                        149.99
+                    </div>
+                    <div class="before-price">
+                        <span>$</span>
+                        169.99
+                    </div>
+                </div>
+                <button class="button">
+                    <ion-icon class="button-icon" name="cart-outline"></ion-icon>
+                    <span class="button-text">Add to Cart</span>
+                </button>
+            </div>
+        </main>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
 </html>

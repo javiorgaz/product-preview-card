@@ -1,0 +1,116 @@
+/* las fuentes variables solo incluyen los font-weight 
+para aplicar italic hace falta un font-face a parte */
+
+/* fraunces font-family  */
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("./fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Fraunces-italic";
+    src: url("fonts/Fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+    font-style: italic;
+}
+
+/* montserrat font-family  */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-italic";
+    src: url("./fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+    padding: 0 50px;
+    background-color: #f2ebe3ff;
+}
+
+/* *************** */
+/* REUSABLE STYLES   */
+/* *************** */
+
+.margin-b-md {
+    margin-bottom: 1.5rem;
+}
+
+/* *************** */
+/* GENERAL STYLES  */
+/* *************** */
+
+.main-wrapper {
+    max-width: 400px;
+
+}
+
+.img {
+    width: 100%;
+}
+
+.subheading {
+    font-size: 0.8rem;
+    color: #6c7289ff;
+}
+
+.heading-primary {
+    font-family: "Fraunces";
+    color: #1c232bff;
+}
+
+.text {
+    font-family: "Montserrat";
+    color: #6c7289ff;
+    line-height: 1.5;
+}
+
+.actual-price {
+    font-size: 2rem;
+    color: #3c8067ff;
+}
+
+.before-price {
+    text-decoration: line-through;
+    color: #6c7289ff;
+}
+
+.button {
+    padding: 1rem 2rem;
+}
+
+.button-text {
+    color: white;
+    font-weight: 600;
+}
+
+.button-icon {
+    color: white;
+}
+
+
+@media (max-width: 375px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-wrapper {
+        background-color: lightblue;
+    }
+
+}
